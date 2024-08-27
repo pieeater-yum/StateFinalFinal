@@ -1,0 +1,17 @@
+combines notes and pictures in one app.
+
+motivation: many notes apps do not have picture support, this one aims to solve this.
+
+user guide: simply press the plus button to make a new note. add note title and details as needed. Photos can be taken whilst making the note. click the red bin icon to delete a note and the pencil icon to edit a note.
+
+design decisions:
+
+- simplicity over features was the leading design principle
+
+- use of android jetpack components. use of ViewModelProvider to manage the TaskViewModel follows MVVM which seperates the UI logic and the business logic --> more maintainable code.
+
+- kotlin coroutines. asynchronous task handling with 'CoroutineScope' to handle background operations.
+
+- image capture. using 'ActivityResultContracts.TakePicture()' instead of older method of 'startActivityForResult' means image capture and management is more reliable.
+
+- validating user input with 'TextWatcher'.
